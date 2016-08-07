@@ -52,10 +52,21 @@
 
   </head>
   <body id="index">
+
+    <div class="banner">
+      <img src="{{ HOME_PATH }}images/headerwithtitle.png">
+    </div>
+
     <div class="wrapper">
       <div class="container">
-        <h1>One Year of Making</h1>
-        <h2 class="quotes" style="display:block">@richlitt and @henrysnow make stuff</h2>
+
+        <div id="description">
+          <p>For one year, Richard Littauer and Henry Snow are going to make stuff.</p>
+          <p>One <b>blog</b> post a day.</p>
+          <p>One <b>video</b> a day.</p>
+          <p>For Richard, one <b>website</b> a week.</p>
+          <p>For Henry, three <b>instagram</b> posts a week.</p>
+        </p>
 
         <!--
         <div class='social-media'>
@@ -70,33 +81,50 @@
         </div>
         -->
 
-        <!--
-        <div class="posts">
-          {% for post in site.posts limit:3 %}
-          <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a><br />
+        {{ content }}
+
+        <div class="row col-md-12 projects">
+          <h2><a href="http://burntfen.com">richard</a>'s websites</h2>
+          {% assign sites = (site.sites | sort: 'ranking') %}
+          {% for project in sites limit:16 %}
+            {% assign loopindex = forloop.index | modulo: 3 %}
+            {% if loopindex == 1 %}
+              <div class="col-xs-6 col-sm-4 col-md-3" style="margin-left:0px;">
+            {% else %}
+              <div class="col-xs-6 col-sm-4 col-md-3">
+            {% endif %}
+                <div class="img-container">
+                  <a href="{{ project.url }}">
+                    <img src="{{ HOME_PATH }}images/{{ project.picture }}" class="card-image"/>
+                  </a>
+                </div>
+                <a class="project-title" href="{{ project.url }}">
+                  <h4>Week {{ project.ranking }}</h4>
+                  <p>{{ project.title }}<br />
+                  {{ project.role }} <span class="status">{{ project.status }}</span></p>
+                </a>
+              </div>
+            {% if forloop.index == 3 %}
+              <div class="clearfix visible-sm-block"></div>
+            {% elsif forloop.index == 4 %}
+              <div class="clearfix visible-md-block visible-lg-block"></div>
+            {% elsif forloop.index == 12 %}
+              <div class="clearfix visible-md-block visible-lg-block"></div>
+            {% endif %}
           {% endfor %}
-          <a class="more" href="/archive">More posts...</a>
         </div>
 
-        <div class="newsletter">
-          <a class="more" href="https://tinyletter.com/richlitt">Start reading my weekly newsletter</a></p>
-        </div>
-        -->
+       </div>
+    </div>
 
-        <p>For one year, <a href="https://twitter.com/realHenrySnow">@realHenrySnow</a> and <a href="https://twitter.com/richlitt">@richlitt</a> will make one blog post a day, one YouTube video a day, and a personal challenge: three Instagram posts a week for Henry, one website a week for Richard.</p>
 
-        <a href="/sites">Sites</a>
+    <div id="instagram" style="background:black;padding-bottom: 30px;" align="center">
+      <h2 class="main-headers"><a href="https://www.instagram.com/ispeakhuman/" class="alt-header">henry</a>'s instagram</h2>
+      <div id="instafeed"></div>
 
-        <div id="instafeed"></div>
-
-        <footer>
-          <p>Send me a letter: <a href="mailto:richard@burntfen.com">richard@burntfen.com</a></p>
-          <p>{{ site.author.name }} &copy; <script type="text/javascript">document.write(new Date().getFullYear())</script>.
-            <a href="https://github.com/RichardLitt/richardlitt.github.com">Source</a>.
-          </p>
-        </footer>
-        <div class="push"></div>
-      </div>
+      <p align="center" style="color:white;padding-top: 20px;">{{ site.author.name }} &copy; <script type="text/javascript">document.write(new Date().getFullYear())</script>.
+        <a style="color:#999;" href="https://github.com/RichardLitt/year-of-making">Source</a>.
+      </p>
     </div>
 
     <!-- Le javascript
@@ -115,9 +143,25 @@
           get: 'user',
           userId: '1062035628',
           clientId: '587851d64f744887851ff2bea7bcf54f',
-          accessToken: '1062035628.587851d.9a3005a3d75a46e9a0fbe19449347ce9'
+          accessToken: '1062035628.587851d.9a3005a3d75a46e9a0fbe19449347ce9',
+          limit: 60,
+          sortBy: 'most-recent',
+          resolution: 'low_resolution',
+          after: function() {
+            $(".instagram-post").each(function() {
+                var text = $(this).attr("title");
+                console.log(text)
+                text = new Date(parseInt(text) * 1000).toDateString()
+                $(this).attr("title", text);
+            })
+          },
+          template: '{% raw %}<a href="{{link}}"><img src="{{image}}" class="instagram-post" title="{{model.created_time}}"></a>{% endraw %}'
       });
       feed.run();
+    </script>
+
+    <script type="text/javascript">
+
     </script>
 
   </body>

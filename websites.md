@@ -6,7 +6,7 @@ description: ""
 {% include JB/setup %}
 
 <div class="row col-md-12 projects">
-  <h2>Websites</h2>
+  <h2>Richard's Websites</h2>
   {% assign sites = (site.sites | sort: 'ranking') %}
   {% for project in sites limit:16 %}
     {% assign loopindex = forloop.index | modulo: 3 %}

@@ -8,9 +8,17 @@ $leftPadding: 15px;
   }
 
   h2 {
-    font-size: 1.5em;
-    margin: 0 0 0 $leftPadding;
+    font-size: 30px;
+    margin: 0 0 0 15px;
     color: #666;
+    padding: 100px 0px 100px;
+  }
+
+  a.alt-header {
+    color: white;
+    &:hover {
+      color: red;
+    }
   }
 
   .quotes {
@@ -53,7 +61,7 @@ $leftPadding: 15px;
 
   .card-image {
     max-width: 100%;
-    position: absolute;
+    // position: absolute;
     -webkit-filter: opacity(100%);
     -webkit-transition: -webkit-filter .25s;
     transition: -webkit-filter .25s;
@@ -62,7 +70,6 @@ $leftPadding: 15px;
   .img-container {
     position: relative;
     overflow:hidden;
-    padding-bottom: 100%;
     &:hover {
       -webkit-filter: opacity(60%);
     }
