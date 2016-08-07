@@ -119,7 +119,7 @@
             <a class="more" href="https://tinyletter.com/richlitt">And his blog, on TinyLetter.</a>
           </div>
 
-          {% assign sites = (site.sites | sort: 'ranking') %}
+          {% assign sites = (site.websites | sort: 'ranking') %}
           {% for project in sites limit:16 %}
             {% assign loopindex = forloop.index | modulo: 3 %}
             {% if loopindex == 1 %}
@@ -133,7 +133,7 @@
                   </a>
                 </div>
                 <a class="project-title" href="{{ project.url }}">
-                  <h4>Week {{ project.ranking }}</h4>
+                  <h4>#{{ project.ranking }}</h4>
                   <p>{{ project.title }}<br />
                   {{ project.role }} <span class="status">{{ project.status }}</span></p>
                 </a>
