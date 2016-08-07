@@ -121,7 +121,7 @@
           <h2 style="padding-bottom:20px;"><a href="http://burntfen.com">richard</a>'s websites</h2>
 
          <div class="blog" style="margin: 0px auto 60px; width: 200px; color:#888;">
-            <a class="more" href="https://tinyletter.com/richlitt">And his blog, on TinyLetter.</a>
+            <a class="more" href="https://tinyletter.com/richlitt">and his daily blog</a>
           </div>
 
           {% assign sites = (site.websites | sort: 'ranking') %}
@@ -153,13 +153,26 @@
           {% endfor %}
         </div>
        </div>
+
+       <div id="updates" class="container" style="margin-bottom: 50px;">
+
+         <form action="https://tinyletter.com/richlitt" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/richlitt', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+          <h4><label for="tlemail">join richard's weekly newsletter for updates</label></h4>
+          <p>
+            <input type="text" name="email" id="tlemail" />
+            <input type="hidden" value="1" name="embed"/>
+            <input type="submit" value="subscribe" class="btn-primary" />
+          </p>
+         </form>
+
+      </div>
     </div>
 
 
     <div id="instagram" style="background:black;padding-bottom: 30px;" align="center">
       <h2 class="main-headers"><a href="https://www.instagram.com/ispeakhuman/" class="alt-header">henry</a>'s instagram</h2>
 
-       <div class="blog" style="margin: 0px auto 60px; width: 200px; color:#888;">
+      <div class="blog" style="margin: 0px auto 60px; width: 200px; color:#888;">
         <a class="more" href="http://www.whereishenry.com">And his blog.</a>
       </div>
 
