@@ -1,6 +1,6 @@
 ---
 layout: index
-title: Richard Littauer
+title: One Year of Making
 tagline:
 ---
 {% include JB/setup %}
