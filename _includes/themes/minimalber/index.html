@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="{{ site.author.name }}">
+    <meta name="copyright" content="&copy; {{ site.author.name }} 2015">
+    <meta name="description" content="My personal website, where I list all of my main projects and occasionally blog.">
+
+    <meta property="og:description" content="My personal website, where I list all of my main projects and occasionally blog." />
+    <meta property="og:url" content="http://burntfen.com/" />
+    <meta property="og:site_name" content="Richard Littauer" />
+    <meta property="og:title" content="Richard Littauer" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://burntfen.com/assets/img/avatar.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="510" />
+    <meta property="og:image:height" content="515" />
+
+    <!-- Twitter: card tags -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@richlitt" />
+    <meta name="twitter:title" content="Richard Littauer">
+    <meta name="twitter:description" content="My personal website, where I list all of my main projects and occasionally blog.">
+    <meta name="twitter:image" content="http://burntfen.com/assets/img/avatar.png">
+
+    <!-- Open Source Protocol -->
+    <link rel="profile" href="http://osprotocol.com" />
+    <meta property="os:repo" content="https://github.com/RichardLitt/richardlitt.github.com" />
+    <meta property="os:rcs_type" content="git" />
+    <meta property="os:src" content="git@github.com:RichardLitt/richardlitt.github.com.git" />
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="{{ HOME_PATH }}assets/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="{{ HOME_PATH }}assets/css/custom.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon" href="{{ HOME_PATH }}images/touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ HOME_PATH }}images/touch-icon-ipad.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ HOME_PATH }}images/touch-icon-iphone-retina.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ HOME_PATH }}images/touch-icon-ipad-retina.png" />
+
+  </head>
+  <body id="index">
+    <div class="wrapper">
+      <div class="container">
+        <h1>One Year of Making</h1>
+        <h2 class="quotes" style="display:block">@richlitt and @henrysnow make stuff</h2>
+
+        <!--
+        <div class='social-media'>
+          <a href="https://github.com/RichardLitt" rel="me"><i class="fa fa-github"></i></a>
+          <a href="https://twitter.com/#!/richlitt" rel="me"><i class="fa fa-twitter"></i></a>
+          <a href="https://medium.com/@richlitt"><i class="fa fa-medium"></i></a>
+          <a href="https://instagram.com/richlittv3/"><i class="fa fa-instagram"></i></a>
+          <a href="https://dribbble.com/richlitt"><i class="fa fa-dribbble"></i></a>
+          <a href="http://www.flickr.com/photos/101526362@N04/"><i class="fa fa-flickr"></i></a>
+          <a href="http://www.last.fm/user/RichardFenn"><i class="fa fa-lastfm"></i></a>
+          <a href="https://angel.co/richlitt"><i class="fa fa-angellist"></i></a>
+        </div>
+        -->
+
+        <!--
+        <div class="posts">
+          {% for post in site.posts limit:3 %}
+          <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a><br />
+          {% endfor %}
+          <a class="more" href="/archive">More posts...</a>
+        </div>
+
+        <div class="newsletter">
+          <a class="more" href="https://tinyletter.com/richlitt">Start reading my weekly newsletter</a></p>
+        </div>
+        -->
+
+        <p>For one year, <a href="https://twitter.com/realHenrySnow">@realHenrySnow</a> and <a href="https://twitter.com/richlitt">@richlitt</a> will make one blog post a day, one YouTube video a day, and a personal challenge: three Instagram posts a week for Henry, one website a week for Richard.</p>
+
+        <a href="/sites">Sites</a>
+
+        <div id="instafeed"></div>
+
+        <footer>
+          <p>Send me a letter: <a href="mailto:richard@burntfen.com">richard@burntfen.com</a></p>
+          <p>{{ site.author.name }} &copy; <script type="text/javascript">document.write(new Date().getFullYear())</script>.
+            <a href="https://github.com/RichardLitt/richardlitt.github.com">Source</a>.
+          </p>
+        </footer>
+        <div class="push"></div>
+      </div>
+    </div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script src="{{ HOME_PATH }}assets/js/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+
+    {% include JB/analytics %}
+
+    <script type="text/javascript" src="{{ HOME_PATH }}assets/js/instafeed.min.js"></script>
+
+    <script type="text/javascript">
+      var feed = new Instafeed({
+          get: 'tagged',
+          tagName: 'yearofmaking',
+          clientId: '587851d64f744887851ff2bea7bcf54f'
+      });
+      feed.run();
+    </script>
+
+  </body>
+</html>
