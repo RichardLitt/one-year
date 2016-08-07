@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="{{ site.author.name }}">
     <meta name="copyright" content="&copy; {{ site.author.name }} 2015">
-    <meta name="description" content="My personal website, where I list all of my main projects and occasionally blog.">
+    <meta name="description" content="{{ site.description }}">
 
-    <meta property="og:description" content="My personal website, where I list all of my main projects and occasionally blog." />
-    <meta property="og:url" content="http://burntfen.com/" />
-    <meta property="og:site_name" content="Richard Littauer" />
-    <meta property="og:title" content="Richard Littauer" />
+    <meta property="og:description" content="{{ site.description }}" />
+    <meta property="og:url" content="{{ site.url }}" />
+    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta property="og:title" content="{{ page.title }}" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="http://burntfen.com/assets/img/avatar.png" />
     <meta property="og:image:type" content="image/png" />
@@ -22,15 +22,15 @@
     <!-- Twitter: card tags -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@richlitt" />
-    <meta name="twitter:title" content="Richard Littauer">
-    <meta name="twitter:description" content="My personal website, where I list all of my main projects and occasionally blog.">
+    <meta name="twitter:title" content="{{ site.title }}">
+    <meta name="twitter:description" content="{{ site.description }}">
     <meta name="twitter:image" content="http://burntfen.com/assets/img/avatar.png">
 
     <!-- Open Source Protocol -->
     <link rel="profile" href="http://osprotocol.com" />
-    <meta property="os:repo" content="https://github.com/RichardLitt/richardlitt.github.com" />
+    <meta property="os:repo" content="https://github.com/{{ site.github_repo }}" />
     <meta property="os:rcs_type" content="git" />
-    <meta property="os:src" content="git@github.com:RichardLitt/richardlitt.github.com.git" />
+    <meta property="os:src" content="git@github.com:{{ site.github_repo }}.git" />
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -44,13 +44,6 @@
 
     <link rel="shortcut icon" href="favicon.ico">
 
-    <!-- Le fav and touch icons
-    <link rel="apple-touch-icon" href="{{ HOME_PATH }}images/touch-icon-iphone.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ HOME_PATH }}images/touch-icon-ipad.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ HOME_PATH }}images/touch-icon-iphone-retina.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ HOME_PATH }}images/touch-icon-ipad-retina.png" />
-    -->
-
   </head>
 
   <body>
@@ -58,7 +51,7 @@
     <div class="navbar navbar-static-top">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="{{ HOME_PATH }}">RICHARD LITTAUER</a>
+          <a class="brand" href="{{ HOME_PATH }}">one year of making</a>
          </div> <!-- /container -->
        </div> <!-- /navbar-inner -->
      </div> <!-- /navbar -->
@@ -72,12 +65,11 @@
       </div>
 
 
-              <footer>
-              <p>Send me a letter: <a href="mailto:richard@burntfen.com">richard@burntfen.com</a></p>
+        <footer>
           <p>{{ site.author.name }} &copy; <script type="text/javascript">
             document.write(new Date().getFullYear());
           </script>.
-            <a href="https://github.com/RichardLitt/richardlitt.github.com">Source</a>.
+            <a href="https://github.com/RichardLitt/one-year-of-making">Source</a>.
           </p>
         </footer>
     <div class="push"></div>
@@ -90,8 +82,8 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-    <script src="{{ HOME_PATH }}assets/js/jquery.js"></script>
-    <script src="{{ HOME_PATH }}assets/js/bootstrap.min.js"></script>
+    <script src="{{ HOME_PATH }}assets/js/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
 
     {% include JB/analytics %}
 

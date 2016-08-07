@@ -21,6 +21,8 @@ author :
   twitter : RichLitt
   #feedburner : feedname
 
+github_repo: RichardLitt/richardlitt.github.com
+
 collections:
   sites:
     output: true
