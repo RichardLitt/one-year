@@ -1,10 +1,10 @@
 ---
 layout: site
 title: "oneyearofmaking.com"
-ranking: 2
+ranking: 3
 picture: oneyearofmaking.png
 outbound: http://oneyearofmaking.com
 ---
 {% include JB/setup %}
 
-Lorem ipsum.
+This site counts. Right?
