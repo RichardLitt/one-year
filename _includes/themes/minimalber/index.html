@@ -7,30 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="{{ site.author.name }}">
     <meta name="copyright" content="&copy; {{ site.author.name }} 2015">
-    <meta name="description" content="My personal website, where I list all of my main projects and occasionally blog.">
+    <meta name="description" content="{{ site.description }}">
 
-    <meta property="og:description" content="My personal website, where I list all of my main projects and occasionally blog." />
-    <meta property="og:url" content="http://burntfen.com/" />
-    <meta property="og:site_name" content="Richard Littauer" />
-    <meta property="og:title" content="Richard Littauer" />
+    <meta property="og:description" content="{{ site.description }}" />
+    <meta property="og:url" content="{{ site.url }}" />
+    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta property="og:title" content="{{ page.title }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="http://burntfen.com/assets/img/avatar.png" />
+<!--    <meta property="og:image" content="http://burntfen.com/assets/img/avatar.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="510" />
-    <meta property="og:image:height" content="515" />
+    <meta property="og:image:height" content="515" /> -->
 
     <!-- Twitter: card tags -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@richlitt" />
-    <meta name="twitter:title" content="Richard Littauer">
-    <meta name="twitter:description" content="My personal website, where I list all of my main projects and occasionally blog.">
-    <meta name="twitter:image" content="http://burntfen.com/assets/img/avatar.png">
+    <meta name="twitter:title" content="{{ site.title }}">
+    <meta name="twitter:description" content="{{ site.description }}">
+    <!-- <meta name="twitter:image" content="http://burntfen.com/assets/img/avatar.png"> -->
 
     <!-- Open Source Protocol -->
     <link rel="profile" href="http://osprotocol.com" />
-    <meta property="os:repo" content="https://github.com/RichardLitt/richardlitt.github.com" />
+    <meta property="os:repo" content="https://github.com/RichardLitt/year-of-making" />
     <meta property="os:rcs_type" content="git" />
-    <meta property="os:src" content="git@github.com:RichardLitt/richardlitt.github.com.git" />
+    <meta property="os:src" content="git@github.com:RichardLitt/year-of-making.git" />
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -59,32 +59,64 @@
 
     <div class="wrapper">
       <div class="container">
-
-        <div id="description">
+        <div class="col-sm-12 description">
           <p>For one year, Richard Littauer and Henry Snow are going to make stuff.</p>
           <p>One <b>blog</b> post a day.</p>
           <p>One <b>video</b> a day.</p>
           <p>For Richard, one <b>website</b> a week.</p>
           <p>For Henry, three <b>instagram</b> posts a week.</p>
-        </p>
-
-        <!--
-        <div class='social-media'>
-          <a href="https://github.com/RichardLitt" rel="me"><i class="fa fa-github"></i></a>
-          <a href="https://twitter.com/#!/richlitt" rel="me"><i class="fa fa-twitter"></i></a>
-          <a href="https://medium.com/@richlitt"><i class="fa fa-medium"></i></a>
-          <a href="https://instagram.com/richlittv3/"><i class="fa fa-instagram"></i></a>
-          <a href="https://dribbble.com/richlitt"><i class="fa fa-dribbble"></i></a>
-          <a href="http://www.flickr.com/photos/101526362@N04/"><i class="fa fa-flickr"></i></a>
-          <a href="http://www.last.fm/user/RichardFenn"><i class="fa fa-lastfm"></i></a>
-          <a href="https://angel.co/richlitt"><i class="fa fa-angellist"></i></a>
         </div>
-        -->
 
-        {{ content }}
+        <div class="col-sm-4 col-sm-offset-2">
+          <h3>richard</h3>
+          <div class='social-media'>
+            <a href="https://twitter.com/#!/richlitt" rel="me"><i class="fa fa-twitter"></i></a>
+            <a href="https://youtube.com/user/Rich0Fenn" rel="me"><i class="fa fa-youtube"></i></a>
+            <a href="https://instagram.com/richlittv3/"><i class="fa fa-instagram"></i></a>
+            <a href="https://tinyletter.com/practice"><i class="fa fa-pencil"></i></a>
+            <a href="mailto:richard@burnfen.com"><i class="fa fa-envelope"></i></a>
+          </div>
+        </div>
 
+        <div class="col-sm-4">
+          <h3>henry</h3>
+          <div class='social-media'>
+            <a href="https://twitter.com/realHenrySnow" rel="me"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.youtube.com/user/japanandtheworld" rel="me"><i class="fa fa-youtube"></i></a>
+            <a href="https://www.instagram.com/ispeakhuman"><i class="fa fa-instagram"></i></a>
+            <a href="http://www.whereishenry.com/"><i class="fa fa-pencil"></i></a>
+            <a href="mailto:Henry@justgotoff.com"><i class="fa fa-envelope"></i></a>
+          </div>
+        </div>
+
+
+        <div class="col-sm-12 description">
+          <p>Follow us here, or get in touch on Twitter.</p>
+        </div>
+
+        </div>
+      </div>
+
+    <div class="row col-md-12 projects" style="background-color:#000">
+      <div class="col-sm-6">
+        <h2>richard's youtube</h2>
+        <iframe width="300" height="200" src="http://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&listType=user_uploads&list=Rich0Fenn" frameborder="0" allowfullscreen></iframe> 
+      </div>
+      <div class="col-sm-6">
+        <h2>henry's youtube</h2>
+        <iframe width="300" height="200" src="http://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&listType=user_uploads&list=japanandtheworld" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="container">
         <div class="row col-md-12 projects">
-          <h2><a href="http://burntfen.com">richard</a>'s websites</h2>
+          <h2 style="padding-bottom:20px;"><a href="http://burntfen.com">richard</a>'s websites</h2>
+
+         <div class="blog" style="margin: 0px auto 60px; width: 200px; color:#888;">
+            <a class="more" href="https://tinyletter.com/richlitt">And his blog, on TinyLetter.</a>
+          </div>
+
           {% assign sites = (site.sites | sort: 'ranking') %}
           {% for project in sites limit:16 %}
             {% assign loopindex = forloop.index | modulo: 3 %}
@@ -113,13 +145,17 @@
             {% endif %}
           {% endfor %}
         </div>
-
        </div>
     </div>
 
 
     <div id="instagram" style="background:black;padding-bottom: 30px;" align="center">
       <h2 class="main-headers"><a href="https://www.instagram.com/ispeakhuman/" class="alt-header">henry</a>'s instagram</h2>
+
+       <div class="blog" style="margin: 0px auto 60px; width: 200px; color:#888;">
+        <a class="more" href="http://www.whereishenry.com">And his blog.</a>
+      </div>
+
       <div id="instafeed"></div>
 
       <p align="center" style="color:white;padding-top: 20px;">{{ site.author.name }} &copy; <script type="text/javascript">document.write(new Date().getFullYear())</script>.

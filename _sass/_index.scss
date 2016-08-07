@@ -1,6 +1,13 @@
 $leftPadding: 15px;
 
 #index {
+
+  text-align: center;
+
+  iframe {
+    margin-bottom: 80px;
+  }
+
   h1 {
     font-size: 2em;
     margin: 10% 0 0 $leftPadding;
@@ -11,7 +18,7 @@ $leftPadding: 15px;
     font-size: 30px;
     margin: 0 0 0 15px;
     color: #666;
-    padding: 100px 0px 100px;
+    padding: 100px 0px 20px;
   }
 
   a.alt-header {
@@ -26,7 +33,7 @@ $leftPadding: 15px;
   }
 
   .social-media {
-    margin: 3% 0 3% $leftPadding;
+    margin: 20px 0 50px $leftPadding;
   }
   .social-media a {
     padding: 0 20px 0 0;
@@ -47,6 +54,7 @@ $leftPadding: 15px;
       &.more {
         color: #888;
         font-weight: 600;
+        font-size:20px;
       }
       &:hover, &.more:hover {
         color: red;
