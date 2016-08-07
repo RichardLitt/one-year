@@ -62,8 +62,28 @@ $leftPadding: 15px;
     }
   }
 
+  a.alt-link {
+    color: #fff;
+    &:hover {
+      color: red;
+    }
+  }
+
+  .description b {
+    color: #000;
+  }
+
   .newsletter {
     margin-bottom: 50px;
+  }
+
+  input.btn-primary {
+    background-color: #888;
+    border-color: #999;
+  }
+
+  h4 label {
+    color: #666;
   }
 
 
