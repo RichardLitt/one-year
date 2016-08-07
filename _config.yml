@@ -106,8 +106,8 @@ JB :
   #
   analytics :
     provider : google
-    #google :
-    #    tracking_id : 'UA-4124866-15'
+    google :
+        tracking_id : 'UA-4124866-38'
     #getclicky :
       #site_id :
     #mixpanel :
