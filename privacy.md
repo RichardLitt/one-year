@@ -1,4 +1,8 @@
-One Year of Making’s Privacy Policy
+---
+layout: page
+title: One Year of Making’s Privacy Policy
+---
+{% include JB/setup %}
 
 One Year of Making (formerly Instagrab) is an mobile phone app providing registered users of Instagram to download, save, re-post photos; create and share your Instagram’s photo albums. One Year of Making also allows you to locate other Instagram’s users. (the “Services”).
 
