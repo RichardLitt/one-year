@@ -1,6 +1,6 @@
 ---
 layout: site
-title: "octobuild.com"
+title: "Octobuild"
 ranking: 1
 picture: octobuild.png
 outbound: http://octobuild.com

@@ -1,6 +1,6 @@
 ---
 layout: site
-title: "oneyearofmaking.com"
+title: "One Year of Making"
 ranking: 3
 picture: oneyearofmaking.png
 outbound: http://oneyearofmaking.com

@@ -1,6 +1,6 @@
 ---
 layout: site
-title: "2tothe20th.com"
+title: "2 to the 20th"
 ranking: 2
 picture: 2tothe20th.gif
 outbound: http://2tothe20th.com
